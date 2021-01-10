@@ -1,1 +1,11 @@
-$worksans-bold: "WorkSans-Bold";
+$Akronim : 'Akronim';
+$Megrim : 'Megrim';
+
+@font-face {
+    font-family: 'Akronim';
+    src: url('/src/assets/fonts/Akronim-Regular.ttf');
+}
+@font-face {
+    font-family: 'Megrim';
+    src: url('/src/assets/fonts/Megrim-Regular.ttf');
+}

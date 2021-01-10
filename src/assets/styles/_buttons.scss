@@ -1,68 +1,26 @@
 @import 'colors.scss';
+@import 'fonts.scss';
 
-// Shapes:
-$button-width: 180px;
-$button-height: 40px;
-$button-border-radius: 5px;
-
-// Button main placeholder:
-%button {
-    outline: 0;
-    margin: 0 10px;
-    text-align: center;
-    width: $button-width;
-    height: $button-height;
-    color: #fff;
-    font-size: 12px;
-    border-radius: $button-border-radius;
-    border: none;
-    transition-duration: 0.3s;
-    opacity: 0.9;
-    &:hover {
-        cursor: pointer;
-        opacity: 1;
-    }
-    &.primary {
-        background: $primary-button-color;
-    }
-    &.secondary {
-        background: $secondary-button-color;
-    }
-    &.tertiary {
-        background: $tertiary-button-color;
-    }
-    &:disabled {
-        background: $disabled-button-color;
-    }
-}
-
-%button-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-%control-button {
-    @extend %button;
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
-    width: 125px;
-    height: 30px;
-}
-
-%add-button {
-    transition-duration: 0.3s;
+button{
+    border : none;
     outline: none;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    color: white;
-    background-color: $green;
-    border: none;
-    border-radius: 2px;
-    &:hover {
-        cursor: pointer;
+    width : 100px;
+    height: 40px;
+    font-size: 1rem;
+    font-family:$Akronim;
+    color:$button-fonts-color;
+    text-transform: uppercase;
+    box-shadow: $shadow-gradiant;
+
+   &:hover{
+    color: $button-fonts-hover-color;
+    cursor:pointer !important;
+    background-color:lightgrey;
+   }
+    &:active{
+    background-color:darkgrey;
+    cursor: progress;
+    color: $button-fonts-active-color;
+    box-shadow: $shadow-gradiant-inside;
     }
 }

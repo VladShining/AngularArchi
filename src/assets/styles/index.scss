@@ -1,6 +1,13 @@
 @import 'reset.scss';
 @import 'colors.scss';
+@import 'buttons.scss';
+@import 'fonts.scss';
+@import 'sizes.scss';
+@import 'checkbox.scss';
 
-body{
-    background-color: $root-dark-background;
+*{
+    box-sizing: border-box;
+    background:$root-background;
+    border-radius: 7px;
+    margin: 0;
 }

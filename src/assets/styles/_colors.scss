@@ -1,2 +1,17 @@
 // ROOT:
 $root-dark-background: #493649;
+$root-background:#e9e9e9;
+
+// Neomorph
+$shadow-gradiant:-.1rem -.1rem .2rem #fff, .1rem .1rem .2rem rgba(0, 0, 0, 0.4);
+$shadow-gradiant-inside: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+
+//button
+$button-fonts-color:#777;
+$button-fonts-active-color:#eee;
+$button-fonts-hover-color:#000;
+
+//checkbox radio
+$checkbox-color:inherit;
+$checkbox-active-color:inherit;
+$checkbox-border-color:inherit;
