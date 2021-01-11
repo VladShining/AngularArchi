@@ -16,6 +16,17 @@ import { FooterComponent } from './@shared/footer/footer.component';
 import { ForOForComponent } from './@pages/for-o-for/for-o-for.component';
 import { HomeComponent } from './@pages/home/home.component';
 
+import { MatSliderModule } from '@angular/material/slider';
+import { FormComponent } from './test/form/form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DragComponent } from './test/drag/drag.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +34,9 @@ import { HomeComponent } from './@pages/home/home.component';
     HeaderComponent,
     FooterComponent,
     ForOForComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent,
+    DragComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +46,23 @@ import { HomeComponent } from './@pages/home/home.component';
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+
+    MatSliderModule,
+
+    MatInputModule,
+
+    MatButtonModule,
+
+    MatSelectModule,
+
+    MatRadioModule,
+
+    MatCardModule,
+
+    ReactiveFormsModule,
+
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
