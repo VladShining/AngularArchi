@@ -9,11 +9,8 @@ describe('DragComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DragComponent ],
-      imports: [
-        NoopAnimationsModule,
-        DragDropModule,
-      ]
+      declarations: [DragComponent],
+      imports: [NoopAnimationsModule, DragDropModule],
     }).compileComponents();
   }));
 

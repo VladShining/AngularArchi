@@ -23,7 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragComponent } from './test/drag/drag.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CalendarComponent } from './test/calendar/calendar.component';
@@ -34,6 +34,9 @@ import { UserListComponent } from './@pages/root/user/component/user-list/user-l
 import { UserDetailsComponent } from './@pages/root/user/component/user-details/user-details.component';
 import { UserFormComponent } from './@pages/root/user/component/user-form/user-form.component';
 import { SidebarComponent } from './@shared/sidebar/sidebar.component';
+import { LeftbarComponent } from './@shared/leftbar/leftbar.component';
+import { RightbarComponent } from './@shared/rightbar/rightbar.component';
+import { DragList } from './test/drag/component/drag.list';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { SidebarComponent } from './@shared/sidebar/sidebar.component';
     DragComponent,
     CalendarComponent,
     SidebarComponent,
+    LeftbarComponent,
+    RightbarComponent,
+    DragList,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +90,7 @@ import { SidebarComponent } from './@shared/sidebar/sidebar.component';
     ReactiveFormsModule,
 
     DragDropModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

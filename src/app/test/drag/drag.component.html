@@ -1,5 +1,8 @@
 <!-- controlleur des listes -->
 <div class="controleur">
+  <drag-list *ngFor="let configuration of label" [label]="label"
+  [canReceive]="canReceive"></drag-list>
+  <input type="text" [(ngModel)]="inputText" placeholder="eto">
   <button class="add" (click)="ajout()">
     ajout
   </button>
@@ -27,7 +30,7 @@
 </div>
 
 <!-- minimum board -->
-<div class="container">
+<div class="container1">
   <h2>redone</h2>
 
   <div cdkDropList #redoneList="cdkDropList" [cdkDropListData]="redone"

@@ -5,7 +5,6 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import List from './component/drag.list';
 
 @Component({
   selector: 'app-drag',
@@ -16,7 +15,9 @@ export class DragComponent {
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
   done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
   redone = [];
-
+  canReceive = [];
+  inputText = 'vide';
+  label: string[] = [];
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
@@ -34,6 +35,7 @@ export class DragComponent {
     }
   }
   ajout() {
-    let list = new List();
+    this.label.push(this.inputText);
+    this.canReceive.push(this.inputText);
   }
 }
