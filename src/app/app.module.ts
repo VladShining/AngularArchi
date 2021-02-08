@@ -26,9 +26,20 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DragComponent } from './test/drag/drag.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CalendarComponent } from './test/calendar/calendar.component';
+import { AppareilModule } from './test/appareil/appareil.module';
+import { RootModule } from './@pages/root/root.module';
+import { UserModule } from './@pages/root/user/user.module';
+import { UserListComponent } from './@pages/root/user/component/user-list/user-list.component';
+import { UserDetailsComponent } from './@pages/root/user/component/user-details/user-details.component';
+import { UserFormComponent } from './@pages/root/user/component/user-form/user-form.component';
+import { SidebarComponent } from './@shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
+    UserListComponent,
+    UserDetailsComponent,
+    UserFormComponent,
     AppComponent,
     LoginComponent,
     HeaderComponent,
@@ -36,16 +47,26 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     ForOForComponent,
     HomeComponent,
     FormComponent,
-    DragComponent
+    DragComponent,
+    CalendarComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppareilModule,
+    RootModule,
+    UserModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
     StoreRouterConnectingModule.forRoot(),
 
     MatSliderModule,
@@ -62,9 +83,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
     ReactiveFormsModule,
 
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
